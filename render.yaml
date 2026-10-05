@@ -3,5 +3,5 @@ services:
   name: bomber-api
   runtime: python
   buildCommand: pip install -r requirements.txt
-  startCommand: Api.main:app --host 0.0.0.0 --port $PORT
+  startCommand: api.main:app --host 0.0.0.0 --port $PORT
   
