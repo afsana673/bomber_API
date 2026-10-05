@@ -5,7 +5,7 @@ import requests
 
 class Bomber:
 
-	def __init__(self, user_mobile, number_of_messege):
+	def __init__(self, user_mobile: str, number_of_messege: int):
 		self.user_mobile = user_mobile
 		self.number_of_messege = number_of_messege
 		self.acceptlanguage = "en-GB,en-US;q=0.9,en;q=0.8"
@@ -29,7 +29,7 @@ class Bomber:
 	def getproxy(self):
 		proxy_scrape_url = "https://api.proxyscrape.com/?request=getproxies&proxytype=http&timeout=10000&country=all"
 		try:
-			proxy_request = requests.get(proxy_scrape_url, Timeout =  10)
+			proxy_request = requests.get(proxy_scrape_url, timeout =  10)
 		except:
 			return False
 		proxylist =  proxy_request.text.split()
@@ -384,11 +384,6 @@ class Bomber:
 					counter +=1
 				if(counter >= self.number_of_messege):
 					break
-
-			#["flipkart","confirmtkt","lenskart","justdial","indialends","apolopharmacy","magicbrick","ajio","mylescars","unacademy","snapdeal", "jiomart"]:
 		else:
 			print("possible errors -  Internet connectivity")
-
-
-
-#shiprocketsocial,valueshoppe,housing.com,hoststar,byju,altbalaji,
+					
